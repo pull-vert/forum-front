@@ -1,0 +1,4 @@
+<h1>Forums</h1>
+<section *ngFor="let forum of forums" (click)="onSelect(forum)">
+  <h2>{{forum.name}}</h2>
+</section>
