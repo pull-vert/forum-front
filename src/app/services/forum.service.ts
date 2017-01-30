@@ -1,6 +1,3 @@
-/**
- * Created by Fred on 13/01/2017.
- */
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
