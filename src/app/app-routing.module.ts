@@ -13,17 +13,17 @@ const routes: Routes = [
    component: LoginComponent
    },
    {
-   path: 'courses',
-   component: CoursesComponent
+   path: 'forum/:id',
+   component: ForumDetailComponent
    }*/,
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/forums',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/forums',
     pathMatch: 'full'
   }
 ];
