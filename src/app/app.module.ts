@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { ForumsComponent } from './forums/forums.component';
 
 import { ForumService } from './services/forum.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ForumsComponent
+    ForumsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

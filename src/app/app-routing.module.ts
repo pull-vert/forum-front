@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ForumsComponent } from './forums/forums.component';
 
+import { AuthGuard } from './services/auth-guard.service';
+
 const routes: Routes = [
   {
     path: 'forums',
@@ -15,7 +17,9 @@ const routes: Routes = [
    {
    path: 'forum/:id',
    component: ForumDetailComponent
-   }*/,
+   },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
+  { path: 'unauthorized', component: UnauthorizedComponent }*/,
   {
     path: '',
     redirectTo: '/forums',
