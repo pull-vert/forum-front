@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
 import { ForumsComponent } from './forums/forums.component';
+import { LoginComponent } from './login/login.component';
 
 import { ForumService } from './services/forum.service';
-import { LoginComponent } from './login/login.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,13 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
-  providers: [ForumService],
+  providers: [
+    ForumService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 
 import { tokenNotExpired } from 'angular2-jwt';
 
@@ -11,12 +11,12 @@ export class AuthService {
   constructor(private http: Http) {}
 
   login(credentials) {
-    this.http.post('https://my-app.com/api/authenticate', credentials)
+    this.http.post('http://localhost:8080/login', credentials)
       .map(res => res.json())
       .subscribe(
         // We're assuming the response will be an object
         // with the JWT on an id_token key
-        data => localStorage.setItem('id_token', data.id_token),
+        data => localStorage.setItem('id_token', data.token),
         error => console.log(error)
       );
   }
