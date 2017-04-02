@@ -8,7 +8,7 @@ import { ForumForumDoc } from '../data/documents/forum-forum-doc';
 
 @Injectable()
 export class ForumService {
-  private forumsUrl = 'http://localhost:8080/forums';  // URL to web api
+  private forumsUrl = 'https://localhost:8080/forums';  // URL to web api
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private authHttp: AuthHttp) {

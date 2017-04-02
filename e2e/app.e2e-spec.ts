@@ -1,6 +1,6 @@
 import { ForumFrontPage } from './app.po';
 
-describe('forum-front App', function() {
+describe('forum-front App', () => {
   let page: ForumFrontPage;
 
   beforeEach(() => {

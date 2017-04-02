@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private http: Http) {}
 
   login(credentials) {
-    this.http.post('http://localhost:8080/login', credentials)
+    this.http.post('https://localhost:8080/login', credentials)
       .map(res => res.json())
       .subscribe(
         // We're assuming the response will be an object
